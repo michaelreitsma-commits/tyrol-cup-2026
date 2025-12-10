@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 from datetime import datetime
+import os
 
 DATABASE = "ski_race.db"
 
@@ -220,4 +221,5 @@ def leaderboard():
 
 if __name__ == "__main__":
     init_db()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
