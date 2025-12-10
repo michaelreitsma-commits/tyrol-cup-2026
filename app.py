@@ -3,7 +3,7 @@ import sqlite3
 from datetime import datetime
 import os
 
-DATABASE = "ski_race.db"
+DATABASE = "/tmp/ski_race.db"
 
 app = Flask(__name__)
 
